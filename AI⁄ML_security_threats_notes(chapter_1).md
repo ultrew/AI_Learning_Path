@@ -1,131 +1,119 @@
-# 🧠 AI/ML Security Threats — Minimal Notes
+# 🧠 AI/ML Security Threats - chapter 1
 
 ---
 
 ## 1. What this room teaches
-- Basics of AI, ML, Deep Learning
-- How LLMs work
-- AI-specific cyber threats
-- Offensive + defensive use of AI
+- Basics of AI, ML, Deep Learning  
+- How LLMs work  
+- AI-specific cyber threats  
+- Offensive + defensive use of AI  
 
 ---
 
-## 2. Core Concepts
+## 2. Core Concepts  
 
-### AI vs ML vs DL
-- **AI** → machines mimic intelligence
-- **ML** → learns from data (no hardcoding)
-- **DL** → neural networks + large datasets
+### AI vs ML vs DL  
+- **AI** → Broad field of building systems that simulate human decision-making or intelligence  
+- **ML** → Subset of AI where models learn patterns from data instead of explicit rules  
+- **DL** → Subset of ML using multi-layer neural networks to learn complex representations  
 
-### ML Types
-- **Supervised** → labeled data
-- **Unsupervised** → no labels
-- **Semi-supervised** → mix of labeled + unlabeled
-- **Reinforcement** → reward-based learning
+### ML Types  
+- **Supervised Learning** → Model learns from labeled input-output pairs  
+- **Unsupervised Learning** → Model finds patterns in unlabeled data  
+- **Semi-supervised Learning** → Model trains on small labeled + large unlabeled dataset  
+- **Reinforcement Learning** → Agent learns actions via rewards and penalties  
 
-### Neural Networks
-- **Input Layer** → raw data input
-- **Hidden Layers** → processing
-- **Output Layer** → result
-- **Synapses** → weighted connections
-
----
-
-## 3. LLMs (Critical)
-
-- **LLMs = Large Language Models**
-- Based on **Transformer architecture (2017)**
-
-### Training Pipeline
-1. Pre-training
-2. Fine-tuning
-3. RLHF
-
-### Use Cases
-- Chat systems
-- Code generation
-- Content generation
+### Neural Networks  
+- **Input Layer** → First layer that receives raw feature data  
+- **Hidden Layers** → Intermediate layers that transform inputs via weighted computations  
+- **Output Layer** → Final layer producing prediction or classification  
+- **Synapses (Weights)** → Numerical parameters controlling signal strength between neurons  
 
 ---
 
-## 4. AI Threats
+## 3. LLMs (Critical)  
 
-### Model-Level Attacks
-- **Prompt Injection** → manipulate instructions
-- **Data Poisoning** → corrupt training data
-- **Model Theft** → extract model via API
-- **Privacy Leakage** → sensitive data exposure
-- **Model Drift** → performance degradation
+- **LLMs (Large Language Models)** → Deep neural networks trained on massive text corpora to predict and generate language  
+- **Transformer Architecture** → Attention-based neural architecture enabling parallel sequence processing  
 
-### AI-Enhanced Attacks
-- **Deepfakes** → fake voice/video
-- **AI Phishing** → realistic scams
+### Training Pipeline  
+- **Pre-training** → Initial training on large generic datasets to learn language patterns  
+- **Fine-tuning** → Task-specific adjustment using curated datasets  
+- **RLHF (Reinforcement Learning from Human Feedback)** → Aligns model outputs with human preferences using reward models  
 
-> AI mainly amplifies existing attack vectors
-
----
-
-## 5. Framework
-
-- **MITRE ATLAS** → AI attack mapping framework
-
-> Equivalent to MITRE ATT&CK for AI systems
+### Use Cases  
+- **Chat Systems** → Conversational AI interfaces  
+- **Code Generation** → Automated code synthesis from prompts  
+- **Content Generation** → Text, media, or data creation  
 
 ---
 
-## 6. Defense Strategies
+## 4. AI Threats  
 
-- Role-based access control (RBAC)
-- Encryption of data/models
-- Model monitoring (drift detection)
-- Secure ML pipelines
-- AI-based threat detection
+### Model-Level Attacks  
+- **Prompt Injection** → Malicious input designed to override model instructions or behavior  
+- **Data Poisoning** → Inserting manipulated data into training sets to corrupt model behavior  
+- **Model Theft (Extraction)** → Reconstructing a model by querying its API outputs  
+- **Privacy Leakage** → Exposure of sensitive training data through model responses  
+- **Model Drift** → Gradual degradation in model performance due to changing data distributions  
 
----
+### AI-Enhanced Attacks  
+- **Deepfakes** → AI-generated synthetic media mimicking real individuals  
+- **AI Phishing** → Highly personalized scam messages generated using AI  
 
-## 7. ML Lifecycle (Attack Surface)
-
-1. Data collection
-2. Data preprocessing
-3. Training
-4. Evaluation
-5. Deployment
-6. Monitoring
-
-> Every stage can be attacked
+> AI increases scale, realism, and automation of attacks—not new primitives
 
 ---
 
-## 8. High-Yield Q&A
+## 5. Framework  
 
-- Semi-labelled + unlabelled → **Semi-supervised**
-- First NN layer → **Input layer**
-- No labels + auto feature extraction → **Deep Learning**
-- NN connections → **Synapses**
-- ChatGPT type → **LLMs**
-- First training stage → **Pre-training**
-- Architecture → **Transformer**
-- AI threat framework → **MITRE ATLAS**
-- Model cloning → **Model theft**
-- Fake media → **Deepfake**
+- **MITRE ATLAS** → Knowledge base mapping adversarial tactics and techniques targeting AI systems  
 
 ---
 
-## ⚠️ Reality Check
+## 6. Defense Strategies  
 
-Reading ≠ understanding.
-
-You should be able to:
-- Identify attack surfaces in ML pipelines
-- Explain prompt injection practically
-- Describe model extraction via APIs
-
-If not, revisit and practice hands-on.
+- **RBAC (Role-Based Access Control)** → Restricts system access based on user roles  
+- **Encryption** → Protects data and models from unauthorized access  
+- **Model Monitoring** → Continuous tracking for anomalies or drift in predictions  
+- **Secure ML Pipelines** → Hardening each stage of data and model lifecycle  
+- **AI Threat Detection** → Using ML models to detect cyber threats  
 
 ---
 
-## Next Step
+## 7. ML Lifecycle (Attack Surface)  
 
-- Build attack scenarios
-- Simulate prompt injection
-- Analyze real AI threat cases
+1. **Data Collection** → Gathering raw data (risk: poisoning)  
+2. **Data Preprocessing** → Cleaning/transformation (risk: manipulation)  
+3. **Training** → Model learning phase (risk: backdoors)  
+4. **Evaluation** → Testing model performance (risk: biased validation)  
+5. **Deployment** → Production use (risk: API abuse, extraction)  
+6. **Monitoring** → Ongoing oversight (risk: undetected drift/exploitation)  
+
+> Every stage = distinct attack vector
+
+---
+
+## 8. High-Yield Q&A  
+
+- Semi-labelled + unlabelled → **Semi-supervised Learning**  
+- First NN layer → **Input Layer**  
+- No labels + auto feature extraction → **Deep Learning**  
+- NN connections → **Synapses (Weights)**  
+- ChatGPT type → **LLMs**  
+- First training stage → **Pre-training**  
+- Architecture → **Transformer**  
+- AI threat framework → **MITRE ATLAS**  
+- Model cloning → **Model Theft (Extraction)**  
+- Fake media → **Deepfake**  
+
+---
+
+## ⚠️ Reality Check  
+
+If you cannot:
+- Trace how prompt injection bypasses system prompts  
+- Simulate model extraction with repeated queries  
+- Identify weakest stage in ML pipeline  
+
+Then you do NOT understand this topic yet.

@@ -2,7 +2,7 @@
 
 ---
 
-# 1. What this room teaches
+# 1. What this chapter teaches
 
 - How Large Language Models process prompts
 - Why prompt wording changes outputs
